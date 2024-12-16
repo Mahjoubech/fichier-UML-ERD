@@ -29,12 +29,14 @@ The Blog Management System features various roles and interactions between the s
 ## UML Use Case Diagram
 Below is the UML Use Case Diagram for the Blog Management System.
 
-![image](https://github.com/user-attachments/assets/d3b37d41-2022-49ae-9485-93a5f97a61c1)
+
+![image](https://github.com/user-attachments/assets/28292980-b2bf-4e24-ac9a-a79f87d17479)
+
 
 ## Entity-Relationship Diagram (ERD)
 Here is the ERD representing the structure of the database for the Blog Management System.
 
-![image](https://github.com/user-attachments/assets/3251c15a-b2e2-4df4-a005-e593cb156da6)
+![image](https://github.com/user-attachments/assets/528ee2c0-a242-4c0a-a9da-95b6b97a1824)
 
 ## Key Features Explained
 
