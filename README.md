@@ -1,49 +1,64 @@
 
 # Blog Management System
 
+## Overview
+This document outlines the Blog Management System, its functionalities, and the database schema. The system includes features for managing blog articles, comments, categories, and user roles (visitor, user, admin). 
+
+## System Features
+- **Visitor:**
+    - Read articles
+    - Comment on articles
+    - Filter articles by category
+- **User:**
+    - Create articles
+    - Edit articles
+    - Delete articles
+    - Manage comments
+- **Admin:**
+    - Manage users
+    - Moderate articles
+    - Moderate comments
+    - View dashboard and statistics
+    - Manage categories
+
+## Icons & Design
+![System Design](https://img.icons8.com/color/48/000000/blogger.png)  
+
+The Blog Management System features various roles and interactions between the system and users.
+
 ## UML Use Case Diagram
+Below is the UML Use Case Diagram for the Blog Management System.
 
-This diagram illustrates the use cases for the Blog Management System. Below are the actors and their corresponding actions:
+![UML Use Case Diagram](![alt text](image.png))
 
-### Actors:
-- **Visitor**: A visitor can read articles, comment on articles, and filter articles by category.
-- **User**: A registered user can perform all the actions of a visitor, but also has the ability to create, edit, delete articles, and manage comments.
-- **Admin**: An admin has all the rights of a user, plus the ability to manage users, moderate articles, moderate comments, view statistics, and manage categories.
+## Entity-Relationship Diagram (ERD)
+Here is the ERD representing the structure of the database for the Blog Management System.
 
-### Use Cases:
-1. **Visitor**:
-    - Read Articles
-    - Comment on Articles
-    - Filter Articles by Category
-    - Sign up and Sign in
+![ERD Diagram](![alt text](image-1.png))
 
-2. **User**:
-    - Create Articles
-    - Edit Articles
-    - Delete Articles
-    - Manage Comments
+## Key Features Explained
 
-3. **Admin**:
-    - Manage Users
-    - Moderate Articles
-    - Moderate Comments
-    - View Dashboard and Statistics
-    - Manage Categories
+### 1. **Visitor Role:**
+   - **Read Articles**: Visitors can read articles posted by users and admins.
+   - **Comment on Articles**: Visitors can comment on articles using their name and email.
+   - **Filter Articles by Category**: Visitors can filter articles by category.
 
-## ERD (Entity Relationship Diagram)
+### 2. **User Role:**
+   - **Create Articles**: Registered users can create new articles with titles, content, and optional images.
+   - **Edit Articles**: Users can edit articles they've created.
+   - **Delete Articles**: Users can delete their own articles.
+   - **Manage Comments**: Users can moderate their comments on articles.
 
-The ERD provides the relationships between different entities in the system:
+### 3. **Admin Role:**
+   - **Manage Users**: Admins can manage users and assign roles.
+   - **Moderate Articles**: Admins can moderate the articles published by users.
+   - **Moderate Comments**: Admins can approve or delete comments.
+   - **View Dashboard and Statistics**: Admins have access to various system statistics, including the number of articles, users, and comments.
+   - **Manage Categories**: Admins can create, edit, and delete categories for structuring articles.
 
-1. **User**: The user has attributes like user_id, name, email, password. A user can create, edit, and delete articles.
-2. **Article**: An article has attributes like article_id, title, content, created_at, updated_at, and category_id.
-3. **Comment**: A comment has attributes like comment_id, user_id, article_id, and content. It relates to articles and users.
-4. **Category**: A category has attributes like category_id and name. It relates to articles.
-5. **Admin**: An admin is a user with extended rights to manage users and moderate content.
-6. **Action**: Actions include "create", "edit", and "delete" related to articles and comments.
+## Conclusion
+The Blog Management System provides an intuitive platform for users to share articles and interact with others through comments. Admins have full control over managing users, articles, and comments, while visitors can browse and engage with the content.
 
-### Relationships:
-- **User** has a one-to-many relationship with **Article** (A user can create many articles).
-- **Article** has a one-to-many relationship with **Comment** (An article can have many comments).
-- **User** has a one-to-many relationship with **Comment** (A user can post many comments).
-- **Article** belongs to a **Category** (Each article belongs to one category).
-- **Admin** manages all entities and moderates content.
+---
+
+
